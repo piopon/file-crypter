@@ -1,0 +1,31 @@
+### Delphi ###
+# Uncomment these types if you want even more clean repository. But be careful.
+# It can make harm to an existing project source.
+
+# RAD Studio C++ compiler-generated binaries (safe to delete)
+*.exe
+*.dll
+*.bpl
+*.bpi
+*.dcp
+*.so
+*.apk
+*.drc
+*.map
+*.dres
+*.rsm
+*.tds
+*.dcu
+*.lib
+
+# output foders
+bin/
+Win32/
+Win64/
+Linux32/
+Linux64/
+
+# history and backups
+__history/
+__recovery/
+*.~*
