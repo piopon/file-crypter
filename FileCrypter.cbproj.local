@@ -3,11 +3,15 @@
   <Transactions>
     <Transaction>2019.06.15 21:59:35.664,=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>2019.06.15 21:59:39.250,=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>2019.06.15 22:00:02.492,D:\projects\file-crypter\MainWindows.h=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.h</Transaction>
     <Transaction>2019.06.15 22:00:02.492,D:\projects\file-crypter\MainWindows.dfm=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>2019.06.15 22:00:02.492,D:\projects\file-crypter\MainWindows.cpp=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>2019.06.15 22:00:02.492,D:\projects\file-crypter\MainWindows.h=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Unit1.h</Transaction>
     <Transaction>2019.06.15 22:00:32.053,D:\projects\file-crypter\temp.h=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
     <Transaction>2019.06.15 22:00:42.750,D:\projects\file-crypter\FileCrypter.cbproj=C:\Users\pnkde\OneDrive\Dokumenty\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
     <Transaction>2019.06.15 22:00:57.190,D:\projects\file-crypter\temp.h=</Transaction>
+    <Transaction>2019.06.16 13:00:52.802,=D:\projects\file-crypter\assets\decrypt.ico</Transaction>
+    <Transaction>2019.06.16 13:00:52.848,=D:\projects\file-crypter\assets\encrypt.ico</Transaction>
+    <Transaction>2019.06.16 13:00:52.873,=D:\projects\file-crypter\assets\icon.ico</Transaction>
+    <Transaction>2019.06.16 13:00:52.920,=D:\projects\file-crypter\assets\open.ico</Transaction>
   </Transactions>
 </BorlandProject>
