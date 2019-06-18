@@ -3,14 +3,13 @@
 #include <vcl.h>
 #pragma hdrstop
 
-#include "MainWindows.h"
+#include "MainWindow.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
-TForm1 *Form1;
+TFormFileCrypt *FormFileCrypt;
 //---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
-	: TForm(Owner)
+__fastcall TFormFileCrypt::TFormFileCrypt(TComponent* Owner) : TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------

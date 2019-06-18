@@ -1,21 +1,33 @@
 //---------------------------------------------------------------------------
 
-#ifndef MainWindowsH
-#define MainWindowsH
+#ifndef MainWindowH
+#define MainWindowH
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.Dialogs.hpp>
+#include <Vcl.ImgList.hpp>
 //---------------------------------------------------------------------------
-class TForm1 : public TForm
+class TFormFileCrypt : public TForm
 {
 __published:	// IDE-managed Components
+	TOpenDialog *FileSelectDialog;
+	TButton *ButtonEncrypt;
+	TButton *ButtonDecrypt;
+	TEdit *EditPassPhrase;
+	TButton *ButtonSelectFile;
+	TLabel *LabelSelectedFile;
+	TLabel *ValueSelectedFile;
+	TImageList *AppImages;
+	TSaveDialog *FileSaveDialog;
 private:	// User declarations
 public:		// User declarations
-	__fastcall TForm1(TComponent* Owner);
+	__fastcall TFormFileCrypt(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm1 *Form1;
+extern PACKAGE TFormFileCrypt *FormFileCrypt;
 //---------------------------------------------------------------------------
 #endif
