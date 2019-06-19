@@ -150,6 +150,10 @@
             <DependentOn>MainWindow.h</DependentOn>
             <BuildOrder>2</BuildOrder>
         </CppCompile>
+        <CppCompile Include="support\FilePath.cpp">
+            <DependentOn>support\FilePath.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
         <CppCompile Include="support\FileUtils.cpp">
             <DependentOn>support\FileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
