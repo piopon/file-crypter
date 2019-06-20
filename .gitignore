@@ -1,6 +1,8 @@
 ### Delphi ###
 # Uncomment these types if you want even more clean repository. But be careful.
 # It can make harm to an existing project source.
+*.stat
+*.cbproj.local
 
 # RAD Studio C++ compiler-generated binaries (safe to delete)
 *.exe
