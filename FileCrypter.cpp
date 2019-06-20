@@ -8,25 +8,17 @@ USEFORM("MainWindow.cpp", FormFileCrypt);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
-	try
-	{
+	try {
 		Application->Initialize();
 		Application->MainFormOnTaskBar = true;
 		Application->CreateForm(__classid(TFormFileCrypt), &FormFileCrypt);
 		Application->Run();
-	}
-	catch (Exception &exception)
-	{
+	} catch (Exception &exception) {
 		Application->ShowException(&exception);
-	}
-	catch (...)
-	{
-		try
-		{
+	} catch (...) {
+		try {
 			throw Exception("");
-		}
-		catch (Exception &exception)
-		{
+		} catch (Exception &exception) {
 			Application->ShowException(&exception);
 		}
 	}
