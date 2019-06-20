@@ -65,8 +65,8 @@
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
         <SanitizedProjectName>FileCrypter</SanitizedProjectName>
-        <IncludePath>support\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>support\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>windows\;support\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>windows\;support\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
         <PackageImports>adortl;appanalytics;bcbie;bcbsmp;bindcomp;bindcompdbx;bindcompfmx;bindcompvcl;bindengine;CustomIPTransport;DataSnapClient;DataSnapCommon;DataSnapConnectors;DatasnapConnectorsFreePascal;DataSnapIndy10ServerTransport;DataSnapNativeClient;DataSnapProviderClient;DataSnapServer;DataSnapServerMidas;dbexpress;dbrtl;dbxcds;DbxClientDriver;DbxCommonDriver;DBXDb2Driver;DBXFirebirdDriver;DBXInformixDriver;DBXInterBaseDriver;DBXMSSQLDriver;DBXMySQLDriver;DBXOdbcDriver;DBXOracleDriver;DBXSqliteDriver;DBXSybaseASADriver;DBXSybaseASEDriver;dsnap;dsnapcon;dsnapxml;emsedge;emshosting;FireDACADSDriver;FireDACASADriver;FireDACCommonODBC;FireDACDb2Driver;FireDACDBXDriver;FireDACDSDriver;FireDACInfxDriver;FireDACMongoDBDriver;FireDACMSAccDriver;FireDACMSSQLDriver;FireDACMySQLDriver;FireDACODBCDriver;FireDACOracleDriver;FireDACPgDriver;FireDACTDataDriver;fmx;fmxase;fmxdae;fmxFireDAC;fmxobj;ibmonitor;ibxbindings;ibxpress;IndyCore;IndyIPClient;IndyIPCommon;IndyIPServer;IndyProtocols;IndySystem;inetdb;inetdbxpress;rtl;svn;tethering;vcl;vclactnband;vcldb;vcldsnap;vclFireDAC;vclib;vclie;vclimg;VCLRESTComponents;VclSmp;vcltouch;vclwinx;vclx;xmlrtl;$(PackageImports)</PackageImports>
@@ -144,12 +144,6 @@
         <CppCompile Include="FileCrypter.cpp">
             <BuildOrder>0</BuildOrder>
         </CppCompile>
-        <CppCompile Include="MainWindow.cpp">
-            <Form>Form1</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>MainWindow.h</DependentOn>
-            <BuildOrder>2</BuildOrder>
-        </CppCompile>
         <CppCompile Include="support\FileContent.cpp">
             <DependentOn>support\FileContent.h</DependentOn>
             <BuildOrder>8</BuildOrder>
@@ -166,7 +160,13 @@
             <DependentOn>support\FileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
         </CppCompile>
-        <FormResources Include="MainWindow.dfm"/>
+        <CppCompile Include="windows\MainWindow.cpp">
+            <Form>FormFileCrypt</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>windows\MainWindow.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
+        <FormResources Include="windows\MainWindow.dfm"/>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

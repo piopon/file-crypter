@@ -4,7 +4,7 @@
 #pragma hdrstop
 #include <tchar.h>
 //---------------------------------------------------------------------------
-USEFORM("MainWindow.cpp", FormFileCrypt);
+USEFORM("windows\MainWindow.cpp", FormFileCrypt);
 //---------------------------------------------------------------------------
 int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int)
 {
