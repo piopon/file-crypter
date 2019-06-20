@@ -158,6 +158,10 @@
             <DependentOn>support\FilePath.h</DependentOn>
             <BuildOrder>7</BuildOrder>
         </CppCompile>
+        <CppCompile Include="support\FileSaver.cpp">
+            <DependentOn>support\FileSaver.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
         <CppCompile Include="support\FileUtils.cpp">
             <DependentOn>support\FileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
