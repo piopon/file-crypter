@@ -156,6 +156,10 @@
             <DependentOn>support\FileSaver.h</DependentOn>
             <BuildOrder>9</BuildOrder>
         </CppCompile>
+        <CppCompile Include="support\FileScrambler.cpp">
+            <DependentOn>support\FileScrambler.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
         <CppCompile Include="support\FileUtils.cpp">
             <DependentOn>support\FileUtils.h</DependentOn>
             <BuildOrder>6</BuildOrder>
