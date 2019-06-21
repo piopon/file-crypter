@@ -80,6 +80,9 @@ object FormFileCrypt: TFormFileCrypt
     ParentFont = False
     TabOrder = 1
     Text = 'passphrase'
+    OnEnter = EditPassPhraseEnter
+    OnExit = EditPassPhraseExit
+    OnKeyUp = EditPassPhraseKeyUp
   end
   object ButtonSelectFile: TButton
     Left = 10

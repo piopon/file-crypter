@@ -1,5 +1,4 @@
 //---------------------------------------------------------------------------
-
 #ifndef MainWindowH
 #define MainWindowH
 //---------------------------------------------------------------------------
@@ -10,6 +9,9 @@
 #include <System.ImageList.hpp>
 #include <Vcl.Dialogs.hpp>
 #include <Vcl.ImgList.hpp>
+#include <memory>
+#include <FilePath.h>
+#include <FileContent.h>
 //---------------------------------------------------------------------------
 class TFormFileCrypt : public TForm
 {
@@ -23,7 +25,14 @@ __published:	// IDE-managed Components
 	TLabel *ValueSelectedFile;
 	TImageList *AppImages;
 	TSaveDialog *FileSaveDialog;
+	void __fastcall EditPassPhraseEnter(TObject *Sender);
+	void __fastcall EditPassPhraseExit(TObject *Sender);
+	void __fastcall EditPassPhraseKeyUp(TObject *Sender, WORD &Key, TShiftState Shift);
 private:	// User declarations
+	const String emptyPassphrase = "passphrase";
+	String currentPassphrase = "";
+	std::unique_ptr<FileContent> fileContent;
+	std::unique_ptr<FilePath> filePath;
 public:		// User declarations
 	__fastcall TFormFileCrypt(TComponent* Owner);
 };
