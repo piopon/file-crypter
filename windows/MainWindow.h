@@ -28,8 +28,10 @@ __published:	// IDE-managed Components
 	void __fastcall EditPassPhraseEnter(TObject *Sender);
 	void __fastcall EditPassPhraseExit(TObject *Sender);
 	void __fastcall EditPassPhraseKeyUp(TObject *Sender, WORD &Key, TShiftState Shift);
+	void __fastcall ButtonSelectFileClick(TObject *Sender);
 private:	// User declarations
 	const String emptyPassphrase = "passphrase";
+	const int selectedFileMaxLen = 37;
 	String currentPassphrase = "";
 	std::unique_ptr<FileContent> fileContent;
 	std::unique_ptr<FilePath> filePath;

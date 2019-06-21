@@ -34,4 +34,17 @@ void __fastcall TFormFileCrypt::EditPassPhraseKeyUp(TObject *Sender, WORD &Key, 
 	currentPassphrase = EditPassPhrase->Text;
 }
 //---------------------------------------------------------------------------
+void __fastcall TFormFileCrypt::ButtonSelectFileClick(TObject *Sender)
+{
+	if(FileSelectDialog->Execute()) {
+		String tempFile = FileSelectDialog->FileName;
+		if(FileExists(tempFile)) {
+			filePath = std::make_unique<FilePath>(tempFile);
+			fileContent = std::make_unique<FileContent>(filePath->getPath());
+			ValueSelectedFile->Hint = filePath->getPath();
+			ValueSelectedFile->Caption = filePath->getLimitedPath(selectedFileMaxLen);
+		}
+	}
+}
+//---------------------------------------------------------------------------
 

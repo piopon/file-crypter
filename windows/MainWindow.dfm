@@ -96,6 +96,7 @@ object FormFileCrypt: TFormFileCrypt
     ImageMargins.Bottom = 3
     Images = AppImages
     TabOrder = 0
+    OnClick = ButtonSelectFileClick
   end
   object FileSelectDialog: TOpenDialog
     Filter = 'All files|*.*|Text files|*.txt'
