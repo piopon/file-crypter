@@ -32,6 +32,7 @@ void __fastcall TFormFileCrypt::EditPassPhraseExit(TObject *Sender)
 void __fastcall TFormFileCrypt::EditPassPhraseKeyUp(TObject *Sender, WORD &Key, TShiftState Shift)
 {
 	currentPassphrase = EditPassPhrase->Text;
+	enableButtonsIfInputOk({ ButtonEncrypt, ButtonDecrypt });
 }
 //---------------------------------------------------------------------------
 void __fastcall TFormFileCrypt::ButtonSelectFileClick(TObject *Sender)
@@ -44,6 +45,16 @@ void __fastcall TFormFileCrypt::ButtonSelectFileClick(TObject *Sender)
 			ValueSelectedFile->Hint = filePath->getPath();
 			ValueSelectedFile->Caption = filePath->getLimitedPath(selectedFileMaxLen);
 		}
+	}
+	enableButtonsIfInputOk({ ButtonEncrypt, ButtonDecrypt });
+}
+//---------------------------------------------------------------------------
+void TFormFileCrypt::enableButtonsIfInputOk(const std::vector<TButton*> &buttons)
+{
+	bool pathOk = filePath != nullptr && !filePath->getPath().IsEmpty();
+	bool passOk = !currentPassphrase.IsEmpty();
+	for(const auto &button : buttons) {
+		button->Enabled = pathOk && passOk;
 	}
 }
 //---------------------------------------------------------------------------

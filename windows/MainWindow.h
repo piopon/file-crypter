@@ -35,6 +35,7 @@ private:	// User declarations
 	String currentPassphrase = "";
 	std::unique_ptr<FileContent> fileContent;
 	std::unique_ptr<FilePath> filePath;
+	void enableButtonsIfInputOk(const std::vector<TButton*> &buttons);
 public:		// User declarations
 	__fastcall TFormFileCrypt(TComponent* Owner);
 };
