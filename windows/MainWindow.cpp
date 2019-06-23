@@ -2,6 +2,8 @@
 #pragma hdrstop
 #include <vcl.h>
 #include <MainWindow.h>
+#include <FileSaver.h>
+#include <FileScrambler.h>
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -55,6 +57,25 @@ void TFormFileCrypt::enableButtonsIfInputOk(const std::vector<TButton*> &buttons
 	bool passOk = !currentPassphrase.IsEmpty();
 	for(const auto &button : buttons) {
 		button->Enabled = pathOk && passOk;
+	}
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFileCrypt::ButtonEncryptClick(TObject *Sender)
+{
+	FileScrambler fileScrambler = {currentPassphrase};
+	FileSaver saver = { encode, FileSaveDialog, fileContent.get() };
+	saver.execute(filePath->getExtension(), fileScrambler.encrypt(fileContent->read()));
+}
+//---------------------------------------------------------------------------
+void __fastcall TFormFileCrypt::ButtonDecryptClick(TObject *Sender)
+{
+	FileScrambler fileScrambler = {currentPassphrase};
+	if(fileScrambler.isContentCryptedWithCurrentKey(fileContent->read())) {
+		FileSaver saver = { decode, FileSaveDialog, fileContent.get() };
+		saver.execute(filePath->getExtension(), fileScrambler.decrypt(fileContent->read()));
+	} else {
+		auto message = L"This file was not encrypted with this passphrase.";
+		MessageBoxW(NULL, message, L"DECRYPT ERROR", MB_OK | MB_ICONERROR);
 	}
 }
 //---------------------------------------------------------------------------

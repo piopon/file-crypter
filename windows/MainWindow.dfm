@@ -51,6 +51,7 @@ object FormFileCrypt: TFormFileCrypt
     ImageMargins.Bottom = 3
     Images = AppImages
     TabOrder = 2
+    OnClick = ButtonEncryptClick
   end
   object ButtonDecrypt: TButton
     Left = 172
@@ -65,6 +66,7 @@ object FormFileCrypt: TFormFileCrypt
     ImageMargins.Bottom = 3
     Images = AppImages
     TabOrder = 3
+    OnClick = ButtonDecryptClick
   end
   object EditPassPhrase: TEdit
     Left = 10
@@ -110,7 +112,7 @@ object FormFileCrypt: TFormFileCrypt
     Left = 280
     Top = 8
     Bitmap = {
-      494C010103001400740020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010103001400780020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

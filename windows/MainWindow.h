@@ -29,6 +29,8 @@ __published:	// IDE-managed Components
 	void __fastcall EditPassPhraseExit(TObject *Sender);
 	void __fastcall EditPassPhraseKeyUp(TObject *Sender, WORD &Key, TShiftState Shift);
 	void __fastcall ButtonSelectFileClick(TObject *Sender);
+	void __fastcall ButtonEncryptClick(TObject *Sender);
+	void __fastcall ButtonDecryptClick(TObject *Sender);
 private:	// User declarations
 	const String emptyPassphrase = "passphrase";
 	const int selectedFileMaxLen = 37;
